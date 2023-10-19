@@ -104,7 +104,7 @@ const fifteen = inventors.filter((inventor) => {
   }
 });
 
-console.table(fifteen);
+// console.table(fifteen);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
@@ -113,4 +113,27 @@ const fullNames = inventors.map((inventor) => {
   return inventor.first + " " + inventor.last;
 });
 
-console.log(fullNames);
+// console.log(fullNames);
+
+// const ordered = inventors.sort((a, b) => {
+//   if (a.year > b.year) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
+
+const ordered = inventors.sort((a, b) => {
+  a.year > b.year ? 1 : -1;
+});
+
+// console.log(ordered);
+// console.table(ordered);
+
+let totalYears = 0;
+
+for (let i = 0; i > inventors.length; i++) {
+  totalYears += inventors[i].year;
+}
+
+// console.log(totalYears);
